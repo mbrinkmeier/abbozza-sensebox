@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="abbozzaSenseBox" system="arduino">
+   <name>abbozza! senseBox:edu</name>
+   <description>
+       Dieses abbozza!-Plugin stellt Blöcke für die senseBox:edu zur Verfügung.
+   </description>
+   <js file="blocks.js"/>
+   <js file="HCSR04.js"/>
+   <js file="HDC100X.js"/>
+   <js file="TSL45315.js"/>
+   <js file="VEML6070.js"/>
+   <js file="BMP280.js"/>
+   <js file="RV8523.js"/>
+   <feature id="cat.SENSEBOX" option="abbozzaSenseBox.enabled">
+      <category name ="senseBox:edu" id="cat.SENSEBOX" color="#ff0000">
+        <block type="sensebox_us_device"/>
+        <block type="sensebox_us_read"/>
+        <block type="sensebox_hdc100x_device"/>
+        <block type="sensebox_hdc100x_humidity"/>
+        <block type="sensebox_hdc100x_temperature"/>
+        <block type="sensebox_tsl45315_device"/>
+        <block type="sensebox_tsl45315_brightness"/>
+        <block type="sensebox_veml6070_device"/>
+        <block type="sensebox_veml6070_uv"/>
+        <block type="sensebox_bmp280_device"/>
+        <block type="sensebox_bmp280_pressure"/>
+        <block type="sensebox_rv8523_device"/>
+        <block type="sensebox_rv8523_get"/>
+        <block type="sensebox_rv8523_set">
+                <value name="SEC">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">42</field>
+                    </block>
+                </value>                   
+                <value name="MIN">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">42</field>
+                    </block>
+                </value>                   
+                <value name="HOUR">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">12</field>
+                    </block>
+                </value>                   
+                <value name="DAY">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">31</field>
+                    </block>
+                </value>                   
+                <value name="MONTH">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">12</field>
+                    </block>
+                </value>                   
+                <value name="YEAR">
+                    <block type="math_number"><mutation confirmed="false"/>
+                        <field name="VALUE">2018</field>
+                    </block>
+                </value>                   
+        </block>
+      </category>
+   </feature>
+   <locales>
+       <language id="de">
+            <msg id="cat.SENSEBOX">senseBox:edu</msg>
+            <msg id="sb.US_DIST">HC-SRO4 Ultraschallsensor#Trigger#Echo</msg>
+            <msg id="sb.US_READ">Messe Distanz</msg>
+            <msg id="sb.HDC100X">HDC100X Feuchtigkeitssensor</msg>
+            <msg id="sb.HDC100X_HUM">Feuchtigkeit</msg>
+            <msg id="sb.HDC100X_TEMP">Temperatur</msg>
+            <msg id="sb.TSL45315">TSL45315 Lichtsensor</msg>
+            <msg id="sb.TSL45315_BRIGHT">Helligkeit</msg>            
+            <msg id="sb.VEML6070">VEML6070 UV-Sensor</msg>
+            <msg id="sb.VEML6070_UV">Helligkeit</msg>            
+            <msg id="sb.BMP280">BMP280 Luftdrucksensor</msg>
+            <msg id="sb.BMP280_PRESSURE">Luftdruck</msg>            
+            <msg id="sb.RV8523">RV8523 Echtzeituhr</msg>            
+            <msg id="sb.RV8523_SET">Setze Zeit</msg>            
+            <msg id="sb.RV8523_YEAR">Jahr</msg>            
+            <msg id="sb.RV8523_MONTH">Monat</msg>            
+            <msg id="sb.RV8523_DAY">Tag</msg>            
+            <msg id="sb.RV8523_HOUR">Stunde</msg>            
+            <msg id="sb.RV8523_MIN">Minute</msg>            
+            <msg id="sb.RV8523_SEC">Sekunde</msg>            
+       </language>
+       <language id="en">           
+            <msg id="cat.SENSEBOX">senseBox:edu</msg>
+            <msg id="sb.US_DIST"> HC-SRO4 Ultrasonic Sensor#Trigger#Echo</msg>
+            <msg id="sb.US_READ">Measure distance</msg>
+            <msg id="sb.HDC100X">HDC100X Humiditysensor</msg>
+            <msg id="sb.HDC100X_HUM">Humidity</msg>
+            <msg id="sb.HDC100X_TEMP">Temperature</msg>
+            <msg id="sb.TSL45315">TSL45315 Light sensor</msg>
+            <msg id="sb.TSL45315_BRIGHT">Brightness</msg>            
+            <msg id="sb.VEML6070">VEML6070 UV-Sensor</msg>
+            <msg id="sb.VEML6070_UV">Brightness</msg>            
+            <msg id="sb.BMP280">BMP280 Pressure sensor</msg>
+            <msg id="sb.BMP280_PRESSURE">Pressure</msg>            
+            <msg id="sb.RV8523">RV8523 Realtime clock</msg>            
+            <msg id="sb.RV8523_SET">Set time</msg>            
+            <msg id="sb.RV8523_YEAR">Year</msg>            
+            <msg id="sb.RV8523_MONTH">Month</msg>            
+            <msg id="sb.RV8523_DAY">Day</msg>            
+            <msg id="sb.RV8523_HOUR">Hour</msg>            
+            <msg id="sb.RV8523_MIN">Minute</msg>            
+            <msg id="sb.RV8523_SEC">Second</msg>            
+       </language>
+   </locales>
+   <requirements>
+   </requirements>
+</plugin>
