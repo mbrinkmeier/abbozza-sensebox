@@ -11,6 +11,7 @@
    <js file="VEML6070.js"/>
    <js file="BMP280.js"/>
    <js file="RV8523.js"/>
+   <js file="OpenSenseMap.js"/>
    <feature id="cat.SENSEBOX" option="abbozzaSenseBox.enabled">
       <category name ="senseBox:edu" id="cat.SENSEBOX" color="#ff0000">
         <block type="sensebox_us_device"/>
@@ -58,6 +59,15 @@
                     </block>
                 </value>                   
         </block>
+        <block type="sensebox_map_ethernet"/>
+        <block type="sensebox_map_wifi"/>
+        <block type="sensebox_map_send">
+                <value name="ID">
+                    <block type="text_const"><mutation confirmed="false"/>
+                        <field name="VALUE">ID</field>
+                    </block>
+                </value>                   
+        </block>
       </category>
    </feature>
    <locales>
@@ -82,6 +92,9 @@
             <msg id="sb.RV8523_HOUR">Stunde</msg>            
             <msg id="sb.RV8523_MIN">Minute</msg>            
             <msg id="sb.RV8523_SEC">Sekunde</msg>            
+            <msg id="sb.MAP_ETHER">OpenSenseMap Ethernet-Verbindung</msg>            
+            <msg id="sb.MAP_WIFI">OpenSenseMap WLAN-Verbindung # SSID # Passwort</msg>            
+            <msg id="sb.MAP_SEND">Sende # ID # Wert</msg>            
        </language>
        <language id="en">           
             <msg id="cat.SENSEBOX">senseBox:edu</msg>
@@ -104,6 +117,9 @@
             <msg id="sb.RV8523_HOUR">Hour</msg>            
             <msg id="sb.RV8523_MIN">Minute</msg>            
             <msg id="sb.RV8523_SEC">Second</msg>            
+            <msg id="sb.MAP_ETHER">OpenSenseMap Ethernet-Connection</msg>            
+            <msg id="sb.MAP_WIFI">OpenSenseMap WiFi-Connection # SSID # Passwort</msg>            
+            <msg id="sb.MAP_SEND">Send # ID # Value</msg>            
        </language>
    </locales>
    <requirements>
