@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<plugin id="abbozzaSenseBox" system="arduino">
+<plugin id="abbozzaSenseBox" system="arduino" parent="devices">
    <name>abbozza! senseBox:edu</name>
    <description>
        Dieses abbozza!-Plugin stellt Blöcke für die senseBox:edu zur Verfügung.
